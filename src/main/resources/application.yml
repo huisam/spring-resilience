@@ -1,0 +1,36 @@
+resilience4j:
+  retry:
+    configs:
+      base:
+        max-attempts: 3
+        retry-exceptions:
+          - java.io.IOException
+        ignore-exceptions:
+          - com.huisam.springresilience.exception.AlwaysFailException
+        enable-exponential-backoff: true
+        wait-duration:
+          seconds: 1
+        exponential-backoff-multiplier: 2.0
+        exponential-max-wait-duration:
+          seconds: 5
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - metrics
+          - prometheus
+
+spring:
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            logger-level: full
+            read-timeout: 2000
+logging:
+  level:
+    com.huisam.springresilience.client: debug
