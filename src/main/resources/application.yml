@@ -5,8 +5,6 @@ resilience4j:
         max-attempts: 3
         retry-exceptions:
           - java.io.IOException
-        ignore-exceptions:
-          - com.huisam.springresilience.exception.AlwaysFailException
         enable-exponential-backoff: true
         wait-duration:
           seconds: 1

@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.clientconfig.HttpClient5FeignConfigur
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
-@EnableFeignClients
+@EnableFeignClients(basePackages = ["com.huisam.springresilience.client"])
 @Configuration(proxyBeanMethods = false)
 class FeignConfiguration {
     @Bean
