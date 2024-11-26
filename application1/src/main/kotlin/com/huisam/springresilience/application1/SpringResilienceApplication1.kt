@@ -1,11 +1,11 @@
-package com.huisam.springresilience
+package com.huisam.springresilience.application1
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SpringResilienceApplication
+class SpringResilienceApplication1
 
 fun main(args: Array<String>) {
-    runApplication<SpringResilienceApplication>(*args)
+    runApplication<SpringResilienceApplication1>(*args)
 }

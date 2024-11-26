@@ -1,7 +1,7 @@
-package com.huisam.springresilience.controller
+package com.huisam.springresilience.application1.controller
 
-import com.huisam.springresilience.client.DelayClient
-import com.huisam.springresilience.client.DelayTimeDto
+import com.huisam.springresilience.application1.client.DelayClient
+import com.huisam.springresilience.application1.client.DelayTimeDto
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam

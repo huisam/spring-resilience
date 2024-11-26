@@ -1,4 +1,4 @@
-package com.huisam.springresilience.client
+package com.huisam.springresilience.application1.client
 
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping

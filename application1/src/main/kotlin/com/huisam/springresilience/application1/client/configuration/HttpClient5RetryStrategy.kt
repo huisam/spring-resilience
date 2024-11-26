@@ -1,4 +1,4 @@
-package com.huisam.springresilience.client.configuration
+package com.huisam.springresilience.application1.client.configuration
 
 import org.apache.hc.client5.http.impl.DefaultHttpRequestRetryStrategy
 import org.apache.hc.core5.http.HttpRequest

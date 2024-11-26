@@ -1,4 +1,4 @@
-package com.huisam.springresilience.client.configuration
+package com.huisam.springresilience.application1.client.configuration
 
 import io.micrometer.core.instrument.binder.httpcomponents.hc5.ObservationExecChainHandler
 import io.micrometer.observation.ObservationRegistry
@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.clientconfig.HttpClient5FeignConfigur
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
-@EnableFeignClients(basePackages = ["com.huisam.springresilience.client"])
+@EnableFeignClients(basePackages = ["com.huisam.springresilience.application1.client"])
 @Configuration(proxyBeanMethods = false)
 class FeignConfiguration {
     @Bean
@@ -20,9 +20,11 @@ class FeignConfiguration {
     fun httpClientBuilderCustomizer(
         observationRegistry: ObservationRegistry,
         httpClient5RetryStrategy: HttpClient5RetryStrategy,
-    ): HttpClient5FeignConfiguration.HttpClientBuilderCustomizer =
-        HttpClient5FeignConfiguration.HttpClientBuilderCustomizer {
-            it.setRetryStrategy(httpClient5RetryStrategy)
+    ): HttpClient5FeignConfiguration.HttpClientBuilderCustomizer {
+
+        return HttpClient5FeignConfiguration.HttpClientBuilderCustomizer {
+//            it.setRetryStrategy(httpClient5RetryStrategy)
             it.addExecInterceptorLast("micrometer", ObservationExecChainHandler(observationRegistry))
         }
+    }
 }

@@ -1,14 +1,13 @@
-package com.huisam.springresilience.service
+package com.huisam.springresilience.application1.service
 
+import com.huisam.springresilience.application1.client.JsonPlaceHolderClient
+import com.huisam.springresilience.application1.client.PostDto
 import io.github.resilience4j.retry.annotation.Retry
-import com.huisam.springresilience.client.JsonPlaceHolderClient
-import com.huisam.springresilience.client.PostDto
 import org.springframework.retry.annotation.Backoff
 import org.springframework.retry.annotation.Recover
 import org.springframework.retry.annotation.Retryable
 import org.springframework.stereotype.Service
 import java.io.IOException
-import java.lang.Exception
 
 @Service
 class ResilienceService(

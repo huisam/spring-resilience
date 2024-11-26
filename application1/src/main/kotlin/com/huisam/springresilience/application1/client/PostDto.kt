@@ -1,4 +1,4 @@
-package com.huisam.springresilience.client
+package com.huisam.springresilience.application1.client
 
 data class PostDto(
     val id: Int,

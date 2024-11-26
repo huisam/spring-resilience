@@ -1,4 +1,4 @@
-package com.huisam.springresilience.retry
+package com.huisam.springresilience.application1.retry
 
 import org.slf4j.LoggerFactory
 import org.springframework.retry.RetryCallback

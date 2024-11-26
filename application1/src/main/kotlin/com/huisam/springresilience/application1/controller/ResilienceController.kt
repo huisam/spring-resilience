@@ -1,7 +1,7 @@
-package com.huisam.springresilience.controller
+package com.huisam.springresilience.application1.controller
 
-import com.huisam.springresilience.client.PostDto
-import com.huisam.springresilience.service.ResilienceService
+import com.huisam.springresilience.application1.client.PostDto
+import com.huisam.springresilience.application1.service.ResilienceService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam

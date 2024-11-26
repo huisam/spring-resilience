@@ -1,3 +1,6 @@
+server:
+  port: 8080
+
 resilience4j:
   retry:
     configs:
@@ -21,6 +24,7 @@ management:
           - metrics
           - prometheus
 
+
 spring:
   cloud:
     openfeign:
@@ -31,4 +35,6 @@ spring:
             read-timeout: 2000
 logging:
   level:
-    com.huisam.springresilience.client: debug
+#    com.huisam.springresilience.client: debug
+    org.apache.hc.client5: debug
+

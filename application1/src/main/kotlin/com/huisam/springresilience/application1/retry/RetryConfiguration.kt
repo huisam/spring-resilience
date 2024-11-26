@@ -1,5 +1,6 @@
-package com.huisam.springresilience.retry
+package com.huisam.springresilience.application1.retry
 
+import com.huisam.springresilience.application1.retry.LogRetryListener
 import io.micrometer.core.instrument.MeterRegistry
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
