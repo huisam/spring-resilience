@@ -3,3 +3,4 @@ plugins {
 }
 rootProject.name = "spring-resilience"
 include("application1")
+include("application2")

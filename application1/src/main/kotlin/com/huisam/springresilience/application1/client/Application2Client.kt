@@ -4,9 +4,10 @@ import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 
-@FeignClient(value = "self-client", url = "http://localhost:8080")
-interface SelfClient {
-
+@FeignClient("application2", url = "http://localhost:8081")
+interface Application2Client {
     @GetMapping("/delay/time")
-    fun getTime(@RequestParam t: Int): DelayTimeDto
+    fun getDelayTime(
+        @RequestParam t: Long
+    ): DelayTimeDto
 }
