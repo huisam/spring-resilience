@@ -32,7 +32,7 @@ spring:
         config:
           default:
             logger-level: full
-            read-timeout: 2000
+            read-timeout: 10000
 logging:
   level:
 #    com.huisam.springresilience.client: debug
